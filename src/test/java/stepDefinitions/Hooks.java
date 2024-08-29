@@ -15,17 +15,17 @@ public class Hooks {
 	@Before
 	public void launchBrowser() {
 		// You can choose the browser based on a system property or config file
-	//	String browser = System.getProperty("browser", "chrome");
+		// String browser = System.getProperty("browser", "chrome");
 		String browser = "chrome";
 		if (browser.equalsIgnoreCase("chrome")) {
 			// Set the path to the ChromeDriver executable (if not set in the environment
 			// variables)
-		//	System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+			// System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			// Set the path to the GeckoDriver executable (if not set in the environment
 			// variables)
-		//	System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
+			// System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
 			driver = new FirefoxDriver();
 		} else {
 			throw new IllegalArgumentException("Browser \"" + browser + "\" is not supported.");
@@ -43,7 +43,7 @@ public class Hooks {
 	public void quitBrowser() {
 		// Quit the browser after the scenario
 		if (driver != null) {
-		//	driver.quit();
+			driver.quit();
 		}
 	}
 }

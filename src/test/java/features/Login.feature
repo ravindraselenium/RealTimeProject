@@ -5,7 +5,7 @@ Feature: Editing Organization Page
     Given I am on OrangrHRM page
     And I enter  "<username>" and  "<password>"
     And I click on the login button
-    Then I navigate to Admin page
+    Then I navigate to home page
     And I navigate To "<menu>"
 
     Examples: 

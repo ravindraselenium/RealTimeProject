@@ -12,7 +12,7 @@ public class HomePageSteps {
 	WebDriver driver = DriverFactory.getDriver();
 	HomePage homePage = new HomePage(driver);
 
-	@Then("I navigate to Admin page")
+	@Then("I navigate to home page")
 	public void i_should_be_logged_in_successfully() {
 		try {
 			Thread.sleep(10000);

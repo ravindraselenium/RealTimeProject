@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import junit.framework.Assert;
-
 public class HomePage {
 	WebDriver driver;
 
@@ -25,7 +23,7 @@ public class HomePage {
 	public void verifyLoggedInUser() {
 
 		WebElement userName_e = driver.findElement(userName_l);
-		//org.junit.Assert.assertEquals(userName_e.getText(), "manda user");
+		//org.junit.Assert.assertEquals( "mandahhj userkkj;j",userName_e.getText());
 	}
 
 	public void navigateToSideMenuItems(String menu) {

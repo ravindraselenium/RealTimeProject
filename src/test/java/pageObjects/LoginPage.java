@@ -6,9 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import common.CommonMethods;
+
 public class LoginPage {
 
 	WebDriver driver;
+	CommonMethods cm = new CommonMethods();
 
 	// Constructor
 	public LoginPage(WebDriver driver) {
@@ -24,13 +27,16 @@ public class LoginPage {
 
 	// Actions
 	public void enterUsername(String username) {
+
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		WebElement userNameElement = driver.findElement(userName_l);
+		cm.customWait(driver, userName_l, "present");
 		userNameElement.sendKeys(username);
 	}
 
